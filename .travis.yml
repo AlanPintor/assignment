@@ -6,5 +6,15 @@ node_js:   - "10.9.0"
  
 cache: npm 
  
-before_install:   - ls -la
+before_install:
+  - npm i -g now
 
+language: node_js node_js:   
+  - 10.9.0 
+  
+install: 
+  - npm install 
+ 
+script: 
+  - npm run build 
+  - npm run test
